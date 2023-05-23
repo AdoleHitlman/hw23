@@ -11,14 +11,7 @@ def get(array, index, default=None):
     :param default: значение по-умолчанию.
     :return: значение по индексу или значение по-умолчанию.
     """
-    n = 0
-    for a in array:
-        n+=1
-    if n == 1:
-        return default
-    if not array:
-        return default
-    if array == []:
+    if array == None or array == []:
         return default
     if index < 0 or index >= len(array):
         return default
